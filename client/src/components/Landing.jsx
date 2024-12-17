@@ -20,7 +20,7 @@ const Landing = () => {
 
   const getNotif = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/notification/${userId}`);
+      const response = await axios.get(`https://virtualassesment.onrender.com/api/notification/${userId}`);
       console.log(response.data);
       setNotification(response.data);
     } catch (error) {
@@ -30,7 +30,7 @@ const Landing = () => {
 
   const confirmRequest = async (status, receiverId) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/notification/respond-request", {
+      const response = await axios.post("https://virtualassesment.onrender.com/api/notification/respond-request", {
         userId: userId,
         targetUserId: receiverId,
         response: status

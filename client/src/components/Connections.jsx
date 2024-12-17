@@ -11,7 +11,7 @@ const Connections = () => {
   const getAcceptedConnections = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/connection/status/${userId}/accepted`
+        `https://virtualassesment.onrender.com/api/connection/status/${userId}/accepted`
       );
       console.log(response.data);
       
@@ -25,7 +25,7 @@ const Connections = () => {
   const removeConnection = async (user2) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/connection/request/${userId}/${user2}/rejected`
+        `https://virtualassesment.onrender.com/api/connection/request/${userId}/${user2}/rejected`
       );
       setConfirmRequest(!confirmRequest); // Toggle to trigger re-fetch
       alert("Connection removed");

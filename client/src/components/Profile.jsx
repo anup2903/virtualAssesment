@@ -19,7 +19,7 @@ const Profile = () => {
   useEffect(() => {
     if (token) {
       axios
-        .get(`http://localhost:5000/api/profiles/${userId}`, {
+        .get(`https://virtualassesment.onrender.com/api/profiles/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -43,7 +43,7 @@ const Profile = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/profiles/set',
+        'https://virtualassesment.onrender.com/api/profiles/set',
         {userId,skills, bio, role, userName },
         { headers: { Authorization: `Bearer ${token}` } }
       );
