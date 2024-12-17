@@ -1,7 +1,7 @@
 const express = require('express');
 const Connection = require('../models/Connection');
 const Profile = require('../models/Profile');
-const router = express.Router();
+const router = express.Router()
 
 router.get('/status/:userId/:status', async (req, res) => {
     const { userId , status } = req.params;
