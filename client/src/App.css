@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg1{
+  height: 100vh;
+  background-color: #f1e0e0;
+  background-image: url("../src/images/mentor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  /* background-attachment: fixed; */
+}
+
+@media  screen and (max-width: 650px){
+  .bg1{
+    display: none;
+  }
+  .signup-main{
+    display: flex;
+    justify-content: center;
+  }
+  .signdiv2{
+    width: 85%;
+  }
+  /* .landing-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  } */
+  .TitleText{
+    font-size: x-large;
+  }
+  .landing-innerDiv{
+    width: 15rem;
+    text-align: center;
+  }
+}
