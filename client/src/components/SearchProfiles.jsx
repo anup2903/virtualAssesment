@@ -19,7 +19,7 @@ const SearchProfiles = () => {
   const handleSearch = async () => {
     try {
       const text = searchTerm.toLowerCase();
-      const response = await axios.get(`https://virtualassesment.onrender.com/api/profiles/filter/${roleFilter}/${text}`);
+      const response = await axios.get(`http://localhost:5000/api/profiles/filter/${roleFilter}/${text}`);
       setProfiles(response.data); // Store profiles in state
     } catch (error) {
       console.error('Error fetching profiles:', error);
@@ -34,7 +34,7 @@ const SearchProfiles = () => {
 
   const sendNotification = async (recieverId) => {
     try {
-      const response = await axios.post("https://virtualassesment.onrender.com/api/notification/send-request", { targetUserId: recieverId, userId: userId });
+      const response = await axios.post("http://localhost:5000/api/notification/send-request", { targetUserId: recieverId, userId: userId });
       console.log(response);
       setConfirmRequest(true);
     } catch (err) {

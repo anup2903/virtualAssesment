@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://virtualassesment.onrender.com/api/users/register', {
+      const response = await axios.post('http://localhost:5000/api/users/register', {
         username,
         email,
         password,
@@ -40,7 +40,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://virtualassesment.onrender.com/api/users/login', {
+      const response = await axios.post('http://localhost:5000/api/users/login', {
         email,
         password,
       });

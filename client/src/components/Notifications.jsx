@@ -10,7 +10,7 @@ const Connections = () => {
     
     const getPendingConnections = async()=>{
         try {
-            const response = await axios.get(`https://virtualassesment.onrender.com/api/connection/status/${userId}/pending`);
+            const response = await axios.get(`http://localhost:5000/api/connection/status/${userId}/pending`);
             console.log(response.data);
             setPendingConnections(response.data);
             
@@ -27,7 +27,7 @@ const Connections = () => {
 
     const acceptConnection = async(user2)=>{
         try {
-            const response = await axios.put(`https://virtualassesment.onrender.com/api/connection/request/${userId}/${user2}/accepted`);
+            const response = await axios.put(`http://localhost:5000/api/connection/request/${userId}/${user2}/accepted`);
             console.log(response);
             setConfirmRequest(true);
             alert("accepted connection")
