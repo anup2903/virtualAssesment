@@ -15,7 +15,7 @@ const MatchedProfiles = () => {
   const matches = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/profiles/filter/${role}/${skills}`,
+        `https://virtualassesment.onrender.com/api/profiles/filter/${role}/${skills}`,
         {
           // params: { role, skillsContext },
         }
@@ -32,7 +32,7 @@ const MatchedProfiles = () => {
 
   const sendNotification = async (recieverId) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/notification/send-request", { targetUserId: recieverId, userId: userId });
+      const response = await axios.post("https://virtualassesment.onrender.com/api/notification/send-request", { targetUserId: recieverId, userId: userId });
       console.log(response);
       setConfirmRequest(true);
     } catch (err) {
