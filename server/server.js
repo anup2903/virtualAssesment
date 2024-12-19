@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-const url = process.env.MONGODB_URl;
+const url = "mongodb+srv://anupsree293:TKE4VcXmAtEhkc75@cluster0.oeisf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
